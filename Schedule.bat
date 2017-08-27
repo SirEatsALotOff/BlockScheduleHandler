@@ -14,7 +14,7 @@ echo.
 @echo DAY = %Day%
 @echo Month = %Month%
 @echo Year = %Year%
-PING 1.1.1.1 -n 1 -w 6000 >NUL
+PING 1.1.1.1 -n 1 -w 1000 >NUL
 :distance
 echo.
 set "from=08-28-2017"
@@ -29,7 +29,7 @@ set /a "otherTotalee=%otherTotale%*2
 set /a "otherTotal=%total%-%otherTotalee%
 echo The total of school days is %otherTotal%
 call :evenorodd
-PING 1.1.1.1 -n 1 -w 6000 >NUL
+PING 1.1.1.1 -n 1 -w 1000 >NUL
 goto schedule
 :evenorodd
 set /a "dtotal=%total%/2"
@@ -53,7 +53,7 @@ set "second=10:38am, %string:~13,3%"
 set "third=12:54pm, %string:~17,7%"
 set "forth=2:30, %string:~25,9%"
 echo %first%~%second%~%third%~%forth%
-PING 1.1.1.1 -n 1 -w 10000 >NUL
+PING 1.1.1.1 -n 1 -w 1000 >NUL
 set basicTime=%time:~0,5%
 pause
 
@@ -61,6 +61,7 @@ set displayed1=0
 set displayed2=0
 set displayed3=0
 set displayed4=0
+set displayed5=0
 if %daydate%==Mon goto altloop
 :loop
 set ampm=am
@@ -127,6 +128,7 @@ set displayed1=0
 set displayed2=0
 set displayed3=0
 set displayed4=0
+set displayed5=0
 )
 PING 1.1.1.1 -n 1 -w 1000 >NUL
 goto loop
