@@ -76,10 +76,19 @@ echo %time%
 echo %basicTime%%ampm%
 set "totalitytime=%basicTime%%ampm%"
 
+if %displayed5%==0 (
+
+if %totalitytime%==10:30am (
+cscript MessageBox.vbs "It is %totalitytime%, 2 minutes till %second%!"
+set displayed5=1
+)
+
+				)
+
 if %displayed1%==0 (
 
-if %totalitytime%==08:58am (
-cscript MessageBox.vbs "It is %totalitytime%, 2 minutes till %first%!"
+if %totalitytime%==08:50am (
+cscript MessageBox.vbs "It is %totalitytime%, 10 minutes till %first%!"
 set displayed1=1
 )
 
@@ -87,8 +96,8 @@ set displayed1=1
 
 if %displayed2%==0 (
 
-if %totalitytime%==10:36am (
-cscript MessageBox.vbs "It is %totalitytime%, 2 minutes till %first%!"
+if %totalitytime%==12:52pm (
+cscript MessageBox.vbs "It is %totalitytime%, 2 minutes till %third%!"
 set displayed2=1
 )
 
@@ -96,8 +105,8 @@ set displayed2=1
 
 if %displayed3%==0 (
 
-if %totalitytime%==12:52pm (
-cscript MessageBox.vbs "It is %totalitytime%, 2 minutes till %first%!"
+if %totalitytime%==02:28pm (
+cscript MessageBox.vbs "It is %totalitytime%, 2 minutes till %forth%!"
 set displayed3=1
 )
 
@@ -105,8 +114,8 @@ set displayed3=1
 
 if %displayed4%==0 (
 
-if %totalitytime%==02:30pm (
-cscript MessageBox.vbs "It is %totalitytime%, 2 minutes till %first%!"
+if %totalitytime%==04:00pm (
+cscript MessageBox.vbs "It is %totalitytime%, 2 minutes till the day ends!"
 set displayed4=1
 )
 
